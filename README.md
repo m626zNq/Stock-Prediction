@@ -14,7 +14,7 @@ The model is trained on historical stock data to predict the closing price of a 
 
 The training data includes features such as open, high, low, and volume. The target is the closing price.
 
-<small>This model is only trained on historical data.. so dont believe the predictions too much.</small>
+This model is only trained on historical data.. so dont believe the predictions too much.
 
 
 
