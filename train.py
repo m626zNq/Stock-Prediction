@@ -81,4 +81,6 @@ if __name__ == "__main__":
     train_models([
     'AAPL', 'GOOG', 'AMZN', 'TSLA', 'NVDA', 'MSFT', 'ETH-USD',
     'META', 'NFLX', 'BA', 'JPM', 'V', 'WMT', 'DIS', 'BABA', 
-    'KO', 'PFE', 'XOM', 'ADBE', 'CSCO', 'ORCL', 'INTC'])
+    'KO', 'PFE', 'XOM', 'ADBE', 'CSCO', 'ORCL', 'INTC', 
+    'NFLX', 'CRM', 'IBM', 'NKE', 'QCOM', 'T', 'MCD', 
+    'CVX', 'LLY', 'TXN', 'AMD', 'HON'])
