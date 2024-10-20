@@ -46,7 +46,7 @@ This script will:
 
 To make predictions using the trained model:
 ```
-python scripts/inference.py --stock <stock symbol> --output <output filename>
+python scripts/inference.py --stock <stock symbol> --output <output filename> --epoch <use model from a specific epoch>
 ```
 
 
