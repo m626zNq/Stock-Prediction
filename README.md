@@ -63,7 +63,6 @@ By default, this will predict stock prices for NVIDIA (NVDA) and save the plot a
 
 ## Customization
 
-- To predict for different stocks, modify the ticker in the `main()` function of `inference.py`.
 - To train on different stocks, update the list of tickers in `train.py`.
 - Adjust the `time_step` and `future_days` parameters in both scripts to change the input sequence length and prediction horizon.
 
