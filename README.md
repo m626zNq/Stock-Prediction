@@ -29,7 +29,7 @@ pip install -r requirements.txt
 ## Usage
 
 ### Training the Model
-<sub>The weights are already trained and saved in the repo 'weights' folder for the current version. This is optional.</sub>
+<sub>***The weights are already trained and saved in the repo 'weights' folder for the current version. This is optional.***</sub>
 
 To train the model on historical stock data:
 ```
