@@ -63,6 +63,7 @@ def plot_and_save_predictions(actual, future_predictions, ticker, filename="pred
     plt.figtext(0.5, 0.01, recommendation, ha="center", fontsize=14, bbox={"facecolor":"orange", "alpha":0.5, "pad":5})
 
     plt.savefig(filename, bbox_inches='tight')
+    plt.show()
     plt.close()
 
 def main():
