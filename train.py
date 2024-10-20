@@ -78,19 +78,20 @@ def train_models(tickers):
     print("Model and scaler saved successfully.")
 
 if __name__ == "__main__":
-train_models([
-    'AAPL', 'GOOG', 'AMZN', 'TSLA', 'NVDA', 'MSFT', 'ETH-USD',
-    'META', 'NFLX', 'BA', 'JPM', 'V', 'WMT', 'DIS', 'BABA',
-    'KO', 'PFE', 'XOM', 'ADBE', 'CSCO', 'ORCL', 'INTC',
-    'NFLX', 'CRM', 'IBM', 'NKE', 'QCOM', 'T', 'MCD',
-    'CVX', 'LLY', 'TXN', 'AMD', 'HON',  'PYPL', 'SBUX', 'ABNB', 'TWTR', 'SHOP', 'SPCE', 'LMT', 'GILD', 'ZM', 
-    'SQ', 'CAT', 'MRK', 'DELL', 'EA', 'SPOT', 'F', 'GM', 'RBLX', 'UBER', 
-    'LYFT', 'BMY', 'ABT', 'K', 'TGT', 'SNE', 'ATVI', 'SIVB', 'PINS', 
-    'WBA', 'PEP', 'TSM', 'BBY', 'DUK', 'CVS', 'RTX', 'DE', 'VZ', 'MO', 
-    'PG', 'UNH', 'CL', 'C', 'LUV', 'AXP', 'HAL', 'GLW', 'MMM', 'ROKU', 
-    'SWKS', 'KO', 'MRNA', 'LRCX', 'ZS', 'DHR', 'COST', 'MDT', 'GOOGL', 
-    'WFC', 'GE', 'CCL', 'FDX', 'UL', 'VEEV', 'ANTM', 'TTD', 'BB', 'PLTR', 
-    'KHC', 'GME', 'BBVA', 'UBS', 'PDD', 'NOK', 'DOCU', 'SAP', 'KMI', 
-    'BAX', 'BIDU', 'TMUS', 'AVGO', 'RCL', 'HOG', 'AAL', 'ENB', 'NOC', 
-    'KO', 'SNPS', 'NOW', 'DOW', 'SCHW', 'EOG', 'MSCI', 'TTWO', 'STZ', 
-    'NVAX', 'GPN', 'FIS', 'MPC', 'DG', 'LULU', 'SOL-ETH'])
+    train_models([
+        'AAPL', 'GOOG', 'AMZN', 'TSLA', 'NVDA', 'MSFT', 'ETH-USD',
+        'META', 'NFLX', 'BA', 'JPM', 'V', 'WMT', 'DIS', 'BABA',
+        'KO', 'PFE', 'XOM', 'ADBE', 'CSCO', 'ORCL', 'INTC',
+        'NFLX', 'CRM', 'IBM', 'NKE', 'QCOM', 'T', 'MCD',
+        'CVX', 'LLY', 'TXN', 'AMD', 'HON',  'PYPL', 'SBUX', 'ABNB', 'TWTR', 'SHOP', 'SPCE', 'LMT', 'GILD', 'ZM', 
+        'SQ', 'CAT', 'MRK', 'DELL', 'EA', 'SPOT', 'F', 'GM', 'RBLX', 'UBER', 
+        'LYFT', 'BMY', 'ABT', 'K', 'TGT', 'SNE', 'ATVI', 'SIVB', 'PINS', 
+        'WBA', 'PEP', 'TSM', 'BBY', 'DUK', 'CVS', 'RTX', 'DE', 'VZ', 'MO', 
+        'PG', 'UNH', 'CL', 'C', 'LUV', 'AXP', 'HAL', 'GLW', 'MMM', 'ROKU', 
+        'SWKS', 'KO', 'MRNA', 'LRCX', 'ZS', 'DHR', 'COST', 'MDT', 'GOOGL', 
+        'WFC', 'GE', 'CCL', 'FDX', 'UL', 'VEEV', 'ANTM', 'TTD', 'BB', 'PLTR', 
+        'KHC', 'GME', 'BBVA', 'UBS', 'PDD', 'NOK', 'DOCU', 'SAP', 'KMI', 
+        'BAX', 'BIDU', 'TMUS', 'AVGO', 'RCL', 'HOG', 'AAL', 'ENB', 'NOC', 
+        'KO', 'SNPS', 'NOW', 'DOW', 'SCHW', 'EOG', 'MSCI', 'TTWO', 'STZ', 
+        'NVAX', 'GPN', 'FIS', 'MPC', 'DG', 'LULU', 'SOL-ETH'
+    ])
