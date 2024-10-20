@@ -28,10 +28,10 @@ def predict_stock_price(model, data, scaler, time_step=120, future_days=30):
 
     input_data = np.reshape(last_time_step_data, (1, time_step, data.shape[1]))
     predicted_prices = model.predict(input_data)[0]
-    
+
     last_known_price = data[-1, 3]
     future_predictions.append(last_known_price)
-    
+
     for price in predicted_prices:
         scaled_price = np.array([[0, 0, 0, price, 0]])
         unscaled_price = scaler.inverse_transform(scaled_price)[0, 3]
@@ -70,11 +70,17 @@ def main():
     parser = argparse.ArgumentParser(description="Stock price prediction script")
     parser.add_argument("--stock", type=str, default="NVDA", help="Stock ticker symbol (default: NVDA)")
     parser.add_argument("--output", type=str, default="predictions.png", help="Output image filename (default: predictions.png)")
+    parser.add_argument("--epoch", type=int, help="Epoch number to load model from")
     args = parser.parse_args()
 
     custom_objects = {"MeanSquaredError": MeanSquaredError}
-    
-    model = load_model('weights/model.h5', custom_objects=custom_objects)
+
+    if args.epoch is not None:
+        model_path = f'weights/model_epoch_{args.epoch:02d}.keras'
+    else:
+        model_path = 'weights/model.h5'
+
+    model = load_model(model_path, custom_objects=custom_objects)
     scaler = np.load('weights/scaler.npy', allow_pickle=True).item()
     stock_data = get_stock_data(args.stock)
 
