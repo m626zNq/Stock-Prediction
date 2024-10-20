@@ -5,6 +5,7 @@ from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow.keras.losses import MeanSquaredError
+import argparse
 
 gpus = tf.config.experimental.list_physical_devices('GPU')
 if gpus:
@@ -64,17 +65,22 @@ def plot_and_save_predictions(actual, future_predictions, ticker, filename="pred
     plt.savefig(filename, bbox_inches='tight')
     plt.close()
 
-def main(ticker='AAPL', output_image='predictions.png'):
+def main():
+    parser = argparse.ArgumentParser(description="Stock price prediction script")
+    parser.add_argument("--stock", type=str, default="NVDA", help="Stock ticker symbol (default: NVDA)")
+    parser.add_argument("--output", type=str, default="predictions.png", help="Output image filename (default: predictions.png)")
+    args = parser.parse_args()
+
     custom_objects = {"MeanSquaredError": MeanSquaredError}
     
     model = load_model('weights/model.h5', custom_objects=custom_objects)
     scaler = np.load('weights/scaler.npy', allow_pickle=True).item()
-    stock_data = get_stock_data(ticker)
+    stock_data = get_stock_data(args.stock)
 
     future_predictions = predict_stock_price(model, stock_data.values, scaler)
 
-    plot_and_save_predictions(stock_data.values, future_predictions, ticker, filename=output_image)
-    print(f"Predictions saved to {output_image}")
+    plot_and_save_predictions(stock_data.values, future_predictions, args.stock, filename=args.output)
+    print(f"Predictions for {args.stock} saved to {args.output}")
 
 if __name__ == "__main__":
-    main('NVDA', 'predictions.png')
+    main()

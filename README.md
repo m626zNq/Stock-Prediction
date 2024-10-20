@@ -46,11 +46,11 @@ This script will:
 
 To make predictions using the trained model:
 ```
-python scripts/inference.py
+python scripts/inference.py --stock <stock symbol> --output <output filename>
 ```
 
 
-By default, this will predict stock prices for NVIDIA (NVDA) and save the plot as `predictions.png`. You can modify the ticker and output filename in the `main()` function of `inference.py`.
+By default, this will predict stock prices for NVIDIA (NVDA) and save the plot as `predictions.png`. You can modify the ticker and output filename by passing the appropriate arguments as shown above.
 
 ## How it Works
 
