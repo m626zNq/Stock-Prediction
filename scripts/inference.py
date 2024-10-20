@@ -67,8 +67,8 @@ def plot_and_save_predictions(actual, future_predictions, ticker, filename="pred
 def main(ticker='AAPL', output_image='predictions.png'):
     custom_objects = {"MeanSquaredError": MeanSquaredError}
     
-    model = load_model('model.h5', custom_objects=custom_objects)
-    scaler = np.load('scaler.npy', allow_pickle=True).item()
+    model = load_model('weights/model.h5', custom_objects=custom_objects)
+    scaler = np.load('weights/scaler.npy', allow_pickle=True).item()
     stock_data = get_stock_data(ticker)
 
     future_predictions = predict_stock_price(model, stock_data.values, scaler)

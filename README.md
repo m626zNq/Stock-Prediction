@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 To train the model on historical stock data:
 ```
-python train.py
+python scripts/train.py
 ```
 
 This script will:
@@ -45,7 +45,7 @@ This script will:
 
 To make predictions using the trained model:
 ```
-python inference.py
+python scripts/inference.py
 ```
 
 

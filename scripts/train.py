@@ -73,8 +73,8 @@ def train_models(tickers):
     model = build_model((X_train.shape[1], X_train.shape[2]), y_train.shape[1])
     model.fit(X_train, y_train, batch_size=32, epochs=15, validation_split=0.2, verbose=1)
 
-    model.save('model.h5')
-    np.save('scaler.npy', scaler)
+    model.save('weights/model.h5')
+    np.save('weights/scaler.npy', scaler)
     print("Model and scaler saved successfully.")
 
 if __name__ == "__main__":
