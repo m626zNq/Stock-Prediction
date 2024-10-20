@@ -1,21 +1,75 @@
-# Stock Price Prediction
+# Stock Price Prediction with Machine Learning
 
-## Install
-Install packages by running `pip install -r requirements.txt`
+This project uses machine learning to predict stock prices based on historical data. It employs a Long Short-Term Memory (LSTM) neural network model to forecast future stock prices for various companies.
 
-## Train
-Train the model by running `python train.py`
+## Features
 
-## Inference
-Make predictions by running `python inference.py` (change the stock name at the bottom of the file)
+- Data collection from Yahoo Finance using the `yfinance` library
+- LSTM model for time series prediction
+- Training on multiple stock data to improve generalization
+- Prediction visualization with matplotlib
+- GPU support for faster training (if available)
 
-## How it works
-The model is trained on historical stock data to predict the closing price of a stock. It uses an LSTM neural network to make predictions.
+## Requirements
 
-The training data includes features such as open, high, low, and volume. The target is the closing price.
+- Python 3.7+
+- TensorFlow 2.x
+- yfinance
+- pandas
+- numpy
+- matplotlib
+- scikit-learn
 
-This model is only trained on historical data.. so dont believe the predictions too much.
+You can install the required packages using:
+```
+pip install -r requirements.txt
+```
 
 
+## Usage
+
+### Training the Model
+
+To train the model on historical stock data:
+```
+python train.py
+```
+
+This script will:
+1. Download historical stock data for predefined tickers
+2. Prepare the data for training
+3. Build and train the LSTM model
+4. Save the trained model as `model.h5` and the scaler as `scaler.npy`
+
+### Making Predictions
+
+To make predictions using the trained model:
+```
+python inference.py
+```
 
 
+By default, this will predict stock prices for NVIDIA (NVDA) and save the plot as `predictions.png`. You can modify the ticker and output filename in the `main()` function of `inference.py`.
+
+## How it Works
+
+1. **Data Collection**: Historical stock data is fetched using the `yfinance` library.
+2. **Data Preprocessing**: The data is scaled using MinMaxScaler to normalize the values.
+3. **Model Architecture**: An LSTM-based neural network is used for sequence prediction.
+4. **Training**: The model is trained on multiple stock data to capture general market trends.
+5. **Prediction**: The trained model predicts future stock prices based on recent data.
+6. **Visualization**: Predictions are plotted against actual prices, including a simple trading recommendation.
+
+## Customization
+
+- To predict for different stocks, modify the ticker in the `main()` function of `inference.py`.
+- To train on different stocks, update the list of tickers in `train.py`.
+- Adjust the `time_step` and `future_days` parameters in both scripts to change the input sequence length and prediction horizon.
+
+## License
+
+This project is released under the Unlicense. For more information, see the [LICENSE](LICENSE) file.
+
+## Disclaimer
+
+This may provide inaccurate predictions. Dont rely on it too much until it is improved.
