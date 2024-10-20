@@ -68,7 +68,7 @@ By default, this will predict stock prices for NVIDIA (NVDA) and save the plot a
 
 ## License
 
-This project is released under the Unlicense. For more information, see the [LICENSE](LICENSE) file.
+This project is released under the GPL-3.0. For more information, see the [LICENSE](LICENSE) file.
 
 ## Disclaimer
 
